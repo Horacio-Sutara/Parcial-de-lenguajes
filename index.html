@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Libros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tienda de Libros Online</h1>
+
+    <main>
+        <section class="catalog">
+            <h2>Catálogo de Libros</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar por título o precio...">
+            </div>
+            <div id="bookList" class="book-list">
+                <!-- Los libros se cargarán aquí con JavaScript -->
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Carrito de Compras</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Los items del carrito se cargarán aquí con JavaScript -->
+                <p>El carrito está vacío.</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cartTotal">0.00</span></h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

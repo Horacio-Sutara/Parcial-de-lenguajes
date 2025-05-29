@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Libros</title>
+    <title>Formulario de Registro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tienda de Libros Online</h1>
+    <div class="container">
+        <h2>Formulario de Registro</h2>
+        <form id="registroForm">
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <span class="error" id="apellidoError"></span>
+            </div>
 
-    <main>
-        <section class="catalog">
-            <h2>Catálogo de Libros</h2>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar por título o precio...">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span class="error" id="nombreError"></span>
             </div>
-            <div id="bookList" class="book-list">
-                <!-- Los libros se cargarán aquí con JavaScript -->
-            </div>
-        </section>
 
-        <section class="cart">
-            <h2>Carrito de Compras</h2>
-            <div id="cartItems" class="cart-items">
-                <!-- Los items del carrito se cargarán aquí con JavaScript -->
-                <p>El carrito está vacío.</p>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="number" id="dni" name="dni" maxlength="8" required>
+                <span class="error" id="dniError"></span>
             </div>
-            <div class="cart-total">
-                <h3>Total: $<span id="cartTotal">0.00</span></h3>
+
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                <span class="error" id="fechaNacimientoError"></span>
             </div>
-        </section>
-    </main>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <button type="button" id="preguntasBtn">Responder Preguntas</button>
+            <div id="respuestasContainer"></div>
+
+            <button type="validar">Registrar</button>
+        </form>
+    </div>
 
     <script src="main.js"></script>
 </body>
